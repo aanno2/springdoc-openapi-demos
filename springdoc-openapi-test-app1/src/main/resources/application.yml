@@ -18,9 +18,21 @@ spring:
   jmx:
     enabled: true
 
-
 jmx:
   rmi:
     port: 9001
     host: localhost
 
+# https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
