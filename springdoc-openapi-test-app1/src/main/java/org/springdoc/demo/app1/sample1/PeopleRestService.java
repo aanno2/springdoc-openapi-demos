@@ -41,7 +41,7 @@ public class PeopleRestService {
 	@Operation(description = "Find person by e-mail", responses = {
 			@ApiResponse(content = @Content(schema = @Schema(implementation = PersonDTO.class)), responseCode = "200"),
 			@ApiResponse(responseCode = "404", description = "Person with such e-mail doesn't exists") })
-	@GetMapping(value = "/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/email/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public PersonDTO findPerson(
 			@Parameter(description = "E-Mail address to lookup for", required = true) @PathVariable("email") final String email) {
 
@@ -54,7 +54,7 @@ public class PeopleRestService {
 		return person;
 	}
 
-	@PostMapping(value = "/{email}", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/email/{email}", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(description = "Create new person", responses = {
 			@ApiResponse(content = @Content(schema = @Schema(implementation = PersonDTO.class), mediaType = MediaType.APPLICATION_JSON_UTF8_VALUE), headers = @Header(name = "Location"), responseCode = "201"),
 			@ApiResponse(responseCode = "409", description = "Person with such e-mail already exists") })
@@ -75,7 +75,7 @@ public class PeopleRestService {
 		return ResponseEntity.created(location).build();
 	}
 
-	@DeleteMapping(value = "/{email}")
+	@DeleteMapping(value = "/email/{email}")
 	@Operation(description = "Delete existing person", responses = {
 			@ApiResponse(responseCode = "204", description = "Person has been deleted"),
 			@ApiResponse(responseCode = "404", description = "Person with such e-mail doesn't exists") })
