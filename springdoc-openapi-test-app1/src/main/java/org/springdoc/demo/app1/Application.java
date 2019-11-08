@@ -12,8 +12,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 
-@SpringBootApplication
-@ComponentScan(basePackages = { "org.springdoc.demo.app1.sample1", "org.springdoc.demo.app1.sample2" })
+@SpringBootApplication(scanBasePackages = { "org.springdoc.demo.app1" })
 //@OpenAPIDefinition(info = @Info(title = "the title", version = "v1", description = "My API", license = @License(name = "Apache 2.0", url = "http://foo.bar"), contact = @Contact(url = "http://gigantic-server.com", name = "Fred", email = "Fred@gigagantic-server.com")))
 public class Application {
 
