@@ -65,6 +65,7 @@ public class ConfigureRMI {
 
     @Qualifier("clientMBeanConnection")
     @Bean
+    @DependsOn("connectorServerFactoryBean")
     public MBeanServerConnectionFactoryBean mBeanServerConnectionFactoryBean()
             throws MalformedURLException
     {
@@ -75,6 +76,7 @@ public class ConfigureRMI {
         return result;
     }
 
+    /*
     @Bean
     public MBeanProxyFactoryBean mBeanProxyFactoryBean(
             @Qualifier("clientMBeanConnection") MBeanServerConnection connection)
@@ -84,6 +86,9 @@ public class ConfigureRMI {
         result.setObjectName(getObjectName());
         result.setServiceUrl(getServiceUrl());
         result.setServer(connection);
+        // result.setManagementInterface();
+        // result.setProxyInterface();
         return result;
     }
+     */
 }
