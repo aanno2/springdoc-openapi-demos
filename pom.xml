@@ -76,19 +76,19 @@
 
 	<dependencies>
 		<!-- springdoc ui -->
-		<dependency>
+		<!-- dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-		</dependency>
-		<dependency>
+		</dependency -->
+		<!-- dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-webflux-ui</artifactId>
-		</dependency>
+		</dependency -->
 		<!-- jmx support -->
-		<dependency>
+		<!-- dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+		</dependency -->
 		<dependency>
 			<groupId>org.jolokia</groupId>
 			<artifactId>jolokia-core</artifactId>
@@ -97,6 +97,21 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>4.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>io.undertow</groupId>
+				<artifactId>undertow-servlet</artifactId>
+				<version>2.0.27.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>io.undertow</groupId>
+				<artifactId>undertow-core</artifactId>
+				<version>2.0.27.Final</version>
+			</dependency>
 			<!-- swagger ui -->
 			<dependency>
 				<groupId>org.springdoc</groupId>
@@ -105,7 +120,22 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-core</artifactId>
+				<version>${springdoc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-webmvc-core</artifactId>
+				<version>${springdoc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-webflux-ui</artifactId>
+				<version>${springdoc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-webflux-core</artifactId>
 				<version>${springdoc.version}</version>
 			</dependency>
 			<dependency>
@@ -139,7 +169,7 @@
 				<plugin>
 					<groupId>org.springdoc</groupId>
 					<artifactId>springdoc-openapi-maven-plugin</artifactId>
-					<version>0.2</version>
+					<version>0.3-SNAPSHOT</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 /**
  * https://stackoverflow.com/questions/29412072/how-to-access-spring-boot-jmx-remotely
  */
-@Configuration
+// @Configuration
 public class ConfigureRMI {
 
     private static final Logger LOG = LoggerFactory.getLogger(ConfigureRMI.class);

@@ -41,7 +41,7 @@
 				<configuration>
 					<!-- wait>1000</wait>
 					<maxAttempts>180</maxAttempts -->
-					<fork>false</fork>
+					<fork>true</fork>
 					<jmxPort>9001</jmxPort>
 				</configuration>
 				<executions>
