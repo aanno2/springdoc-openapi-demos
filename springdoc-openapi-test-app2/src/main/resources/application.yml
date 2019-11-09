@@ -7,8 +7,10 @@ server:
     min-response-size: 1024
   http2:
     enabled: true
-spring: 
-  resources: 
+spring:
+  jmx:
+    enabled: true
+  resources:
     cache: 
       period: 31536000
       cachecontrol:
@@ -26,3 +28,22 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
   version: '@springdoc.version@'
+
+jmx:
+  rmi:
+    port: 9001
+    host: localhost
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'

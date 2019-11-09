@@ -57,21 +57,21 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<swagger-api.version>2.0.8</swagger-api.version>
-		<maven-compiler-plugin.version>3.6.2</maven-compiler-plugin.version>
-		<maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
-		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
 		<maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
-		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-		<maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+		<maven-source-plugin.version>3.2.0</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-		<maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+		<maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
-		<jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
+		<jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
 		<resource.delimiter>@</resource.delimiter>
 		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
-		<spring-boot.version>2.2.0.RELEASE</spring-boot.version>
-		<springdoc.version>1.2.4</springdoc.version>
+		<spring-boot.version>2.2.1.RELEASE</spring-boot.version>
+		<springdoc.version>1.2.5-SNAPSHOT</springdoc.version>
 	</properties>
 
 	<dependencies>
