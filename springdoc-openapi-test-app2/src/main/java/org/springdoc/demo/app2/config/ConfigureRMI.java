@@ -43,6 +43,8 @@ public class ConfigureRMI {
         final RmiRegistryFactoryBean rmiRegistryFactoryBean = new RmiRegistryFactoryBean();
         rmiRegistryFactoryBean.setPort(rmiPort);
         LOG.info("rmi: " + rmiHost + ":" + rmiPort);
+        // Must be false if fork=true and true if fork=false
+        // fork=true leads to java.io.InvalidClassException: filter status: REJECTED
         rmiRegistryFactoryBean.setAlwaysCreate(true);
         return rmiRegistryFactoryBean;
     }

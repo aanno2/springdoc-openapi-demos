@@ -39,8 +39,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<wait>1000</wait>
-					<maxAttempts>180</maxAttempts>
+					<!-- wait>1000</wait>
+					<maxAttempts>180</maxAttempts -->
 					<fork>false</fork>
 					<jmxPort>9001</jmxPort>
 				</configuration>
